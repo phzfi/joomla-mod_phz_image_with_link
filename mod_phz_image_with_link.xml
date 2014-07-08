@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="2.5"
+	client="site"
+	method="upgrade">
+	<name>MOD_PHZ_IMAGE_WITH_LINK</name>
+    <creationDate>2014</creationDate>
+    <author>Pharazon Ab</author>
+    <authorEmail>phz@phz.fi</authorEmail>
+    <authorUrl>http://www.phz.fi</authorUrl>
+    <version>1.0.0</version>
+	<description>MOD_PHZ_IMAGE_WITH_LINK_XML_DESCRIPTION</description>
+  <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<files>
+		<filename module="mod_phz_image_with_link">mod_phz_image_with_link.php</filename>
+		<folder>tmpl</folder>
+    <folder>languages</folder>
+    <folder>tmpl/css</folder>
+    <folder>tmpl/js</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_phz_image_with_link.xml</filename>
+    <filename>LICENSE.txt</filename>
+	</files>
+    <languages folder="languages">
+        <language tag="en-GB">en-GB.mod_phz_image_with_link.ini</language>
+        <language tag="en-GB">en-GB.mod_phz_image_with_link.sys.ini</language>
+        <language tag="fi-FI">fi-FI.mod_phz_image_with_link.ini</language>
+        <language tag="fi-FI">fi-FI.mod_phz_image_with_link.sys.ini</language>
+    </languages>
+	<config>
+		<fields name="params">
+		      <fieldset name="basic">
+                <field
+                    name="title"
+                    type="textarea"
+                    rows="3"
+                    label="MOD_PHZ_IMAGE_WITH_LINK_TITLE_LABEL"
+                    description="MOD_PHZ_IMAGE_WITH_LINK_TITLE_DESC" />
+                <field
+                    name="font_color"
+                    type="text"
+                    label="MOD_PHZ_IMAGE_WITH_LINK_FONT_COLOR_LABEL"
+                    description="MOD_PHZ_IMAGE_WITH_LINK_FONT_COLOR_DESC" />
+                <field
+                    name="link"
+                    type="URL"
+                    label="MOD_PHZ_IMAGE_WITH_LINK_LINK_LABEL"
+                    description="MOD_PHZ_IMAGE_WITH_LINK_LINK_DESC" />
+                <field
+                    name="linktext"
+                    type="URL"
+                    label="MOD_PHZ_IMAGE_WITH_LINK_LINKTEXT_LABEL"
+                    description="MOD_PHZ_IMAGE_WITH_LINK_LINKTEXT_DESC" />
+               <field
+                    name="targetw"
+                    type="radio"
+                    default="2"
+                    label="MOD_PHZ_IMAGE_WITH_LINK_TARGETW_LABEL"
+                    description="MOD_PHZ_IMAGE_WITH_LINK_TARGETW_DESC">
+                    <option
+                        value="1">MOD_PHZ_IMAGE_WITH_LINK_TARGETW_NEW</option>
+                    <option
+                         value="2">MOD_PHZ_IMAGE_WITH_LINK_TARGETW_CURRENT</option>
+                </field>
+                <field
+                    name="image"
+                    type="media"
+                    label="MOD_PHZ_IMAGE_WITH_LINK_IMAGE_LABEL"
+                    description="MOD_PHZ_IMAGE_WITH_LINK_IMAGE_DESC" />
+                <field
+                    name="opacity"
+                    type="integer"
+                    default="30"
+                    first="0"
+                    last="100"
+                    step="1"
+                    label="MOD_PHZ_IMAGE_WITH_LINK_DARKEN_LABEL"
+                    description="MOD_PHZ_IMAGE_WITH_LINK_DARKEN_DESC" />
+                <field
+                    name="background_color"
+                    type="color"
+                    default="#FFF000"
+                    label="MOD_PHZ_IMAGE_WITH_LINK_FONT_BGCOLOR_LABEL"
+                    description="MOD_PHZ_IMAGE_WITH_LINK_FONT_BGCOLOR_DESC" />
+                <field
+                    name="height"
+                    type="text"
+                    label="MOD_PHZ_IMAGE_WITH_LINK_HEIGHT_LABEL"
+                    description="MOD_PHZ_IMAGE_WITH_LINK_HEIGHT_DESC" />
+                <field
+	                name="boxwidth"
+	                type="radio"
+	                default="1"
+	                label="MOD_PHZ_IMAGE_WITH_LINK_WIDTH_LABEL"
+	                description="MOD_PHZ_IMAGE_WITH_LINK_WIDTH_DESC">
+	                <option
+	                    value="1">MOD_PHZ_IMAGE_WITH_LINK_WIDTH_SINGLE</option>
+	                <option
+	                     value="2">MOD_PHZ_IMAGE_WITH_LINK_WIDTH_DOUBLE</option>
+                </field>
+                <field
+	                name="text_position"
+	                type="radio"
+	                default="0"
+	                label="MOD_PHZ_IMAGE_WITH_LINK_TEXT_POSITION_LABEL"
+	                description="MOD_PHZ_IMAGE_WITH_LINK_TEXT_POSITION_DESC">
+	                <option
+	                    value="0">MOD_PHZ_IMAGE_WITH_LINK_MIDDLE</option>
+	                <option
+	                    value="1">MOD_PHZ_IMAGE_WITH_LINK_LEFT</option>
+	                <option
+	                     value="2">MOD_PHZ_IMAGE_WITH_LINK_UP</option>
+	                <option
+	                     value="3">MOD_PHZ_IMAGE_WITH_LINK_RIGHT</option>
+                </field>
+
+            </fieldset>
+			<fieldset
+				name="advanced">
+
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
