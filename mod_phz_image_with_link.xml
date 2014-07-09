@@ -15,9 +15,9 @@
 	<files>
 		<filename module="mod_phz_image_with_link">mod_phz_image_with_link.php</filename>
 		<folder>tmpl</folder>
-    <folder>languages</folder>
-    <folder>tmpl/css</folder>
-    <folder>tmpl/js</folder>
+        <folder>languages</folder>
+        <folder>tmpl/css</folder>
+        <folder>tmpl/js</folder>
 		<filename>helper.php</filename>
 		<filename>index.html</filename>
 		<filename>mod_phz_image_with_link.xml</filename>

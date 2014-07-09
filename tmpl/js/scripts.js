@@ -14,18 +14,16 @@ jQuery(document).ready(function($) {
             $(this).find(".link-title").width($(this).find(".link a").outerWidth());
         }
     });
+    function swapTextBeforeImage(){
+        $("div.imagebox div.texts.text-position3").each(function(){
+            $(this).parent().prepend($(this));
+        });
+    }
 
-
+    function swapImageBeforeText(){
+        $("div.imagebox div.image.text-position3").each(function(){
+            $(this).parent().prepend($(this));
+        });
+    }
 });
 
-function swapTextBeforeImage(){
-	$("div.imagebox div.texts.text-position3").each(function(){
-    	$(this).parent().prepend($(this));
-    });
-}
-
-function swapImageBeforeText(){
-	$("div.imagebox div.image.text-position3").each(function(){
-    	$(this).parent().prepend($(this));
-    });
-}
