@@ -27,7 +27,7 @@ $opacity = htmlspecialchars($params->get('opacity'));
 $text_position = htmlspecialchars($params->get('text_position'));
 $target = htmlspecialchars($params->get('targetw'));
 
-if(isset($image) && $image != '' && (!strpos($image, "http") || !strpos($image, "www"))) {
+if(isset($image) && $image != '' && (strpos($image, "http") === false && strpos($image, "www") === false)) {
     $image = JURI::base() . $image;
 }
 
